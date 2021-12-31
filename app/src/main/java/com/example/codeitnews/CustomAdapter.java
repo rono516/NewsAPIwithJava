@@ -13,8 +13,8 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomViewHolder> {
-    private Context context;
-    private List<NewsHeadlines> headlines;
+    private final Context context;
+    private final List<NewsHeadlines> headlines;
 
     public CustomAdapter(Context context, List<NewsHeadlines> headlines) {
         this.context = context;
