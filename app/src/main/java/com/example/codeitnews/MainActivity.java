@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.codeitnews.Models.NewsApiResponse;
 import com.example.codeitnews.Models.NewsHeadlines;
@@ -33,6 +34,10 @@ public class MainActivity extends Activity implements SelectListener, View.OnCli
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
+                dialog.setTitle("Fetching "+ query+ " news articles");
+                dialog.show();
+                RequestManager manager = new RequestManager(MainActivity.this);
+                manager.getNewsHeadlines(listener, "general", query);
                 return true;
             }
 
@@ -67,13 +72,17 @@ public class MainActivity extends Activity implements SelectListener, View.OnCli
     private final OnFetchDataListener<NewsApiResponse> listener = new OnFetchDataListener<NewsApiResponse>() {
         @Override
         public void OnFetchData(List<NewsHeadlines> list, String message) {
-
+            if (list.isEmpty()){
+                Toast.makeText(MainActivity.this, "No data found !", Toast.LENGTH_SHORT).show();
+            }else{
             showNews(list);
             dialog.dismiss();
+            }
         }
 
         @Override
         public void onError(String message) {
+            Toast.makeText(MainActivity.this, "An Error Occurred! ", Toast.LENGTH_SHORT).show();
 
         }
     };
