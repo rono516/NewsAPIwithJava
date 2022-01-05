@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/CodeiTNews/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/CodeiTNews/app/src/main/res/layout/activity_details.xml" value="0.1" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/CodeiTNews/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/CodeiTNews/app/src/main/res/layout/headline_list_items.xml" value="1.1" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/CodeiTNews/app/src/main/res/layout/toolbar.xml" value="0.25" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/CodeiTNews/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.13125" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/CodeiTNews/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.13125" />
       </map>
     </option>
   </component>

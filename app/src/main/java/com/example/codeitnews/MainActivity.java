@@ -10,6 +10,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -29,6 +30,10 @@ public class MainActivity extends Activity implements SelectListener, View.OnCli
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+//        requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
+//        this.getWindow().setTitle("CodeiTNews");
+        //getSupportActionBar();
 
         searchView = findViewById(R.id.search_view);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
